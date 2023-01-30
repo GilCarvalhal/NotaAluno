@@ -1,9 +1,9 @@
-package ifNota;
+package application;
 
 
 import java.util.Scanner;
 
-public class NotaAluno {
+public class Program {
 
 	public static void main(String[] args) {
 
