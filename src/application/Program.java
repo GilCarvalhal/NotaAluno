@@ -1,33 +1,28 @@
 package application;
 
-
 import java.util.Scanner;
+
+import entities.Nota;
 
 public class Program {
 
 	public static void main(String[] args) {
 
-		Scanner input = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Digite uma nota:");
-		double nota = input.nextDouble();
+		double nota = sc.nextDouble();
 
-		if (nota > 10 || nota < 0) {
-			System.out.println("Nota inválida");
-		} else if (nota >= 8.1) {
-			System.out.println("Conceito A");
-			System.out.println("Parabéns!!!");
-		} else if (nota >= 6.1) {
-			System.out.println("Conceito B");
-		} else if (nota >= 4.1) {
-			System.out.println("Conceito C");
-		} else if (nota >= 2.1) {
-			System.out.println("Conceito D");
-		} else {
-			System.out.println("Conceito E");
+		Nota n = new Nota(nota);
+
+		try {
+			System.out.println(n.operacao());
+		} catch (RuntimeException e) {
+			System.out.println(e.getMessage());
 		}
+
 		System.out.println("Fim");
-		input.close();
+		sc.close();
 	}
 
 }
