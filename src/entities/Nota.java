@@ -24,7 +24,7 @@ public class Nota {
 			return "Conceito C";
 		} else if (notas < 4.1 && notas >= 2.1) {
 			return "Conceito D";
-		} else if (notas < 2.1 && notas == 0) {
+		} else if (notas < 2.1 && notas >= 0) {
 			return "Conceito E";
 		} else {
 			throw new RuntimeException("Invalid command: Unexpected error");
